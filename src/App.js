@@ -1,25 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment } from "react";
+import { withStyle } from "styletron-react";
+import { StyledBaseButton } from "baseui/button";
+import "./App.scss";
+import Appbar from "./components/Appbar";
+
+const Button = withStyle(StyledBaseButton, ({ $theme }) => {
+  return {
+    background: $theme.colors.accent,
+    color: $theme.colors.white,
+  };
+});
 
 function App() {
   return (
-    <div className="App">
+    <Fragment>
+      <Appbar />
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Button>Hello</Button>
       </header>
-    </div>
+    </Fragment>
   );
 }
 
