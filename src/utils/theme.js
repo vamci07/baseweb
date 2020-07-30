@@ -18,7 +18,7 @@ const lightThemeOverrides = {
   colors: {
     accent: "#264653",
     shineColor: "#fdcb6e",
-    shineBackground: '#264653'
+    shineBackground: "#264653",
   },
 };
 
@@ -26,7 +26,7 @@ const darkThemeOverrides = {
   colors: {
     accent: "#264653",
     shineColor: "#f3c4fb",
-    shineBackground: '#264653'
+    shineBackground: "#264653",
   },
 };
 
@@ -53,7 +53,8 @@ export const ThemeProvider = ({ children }) => {
   const Wrapper = styled("div", ({ $theme }) => {
     return {
       background: $theme.colors.background,
-      textAlign: "center",
+      height: "100vh",
+      width: "100vw",
     };
   });
 
